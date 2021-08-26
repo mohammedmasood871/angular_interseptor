@@ -1,0 +1,58 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active">Sign Up</h2>
+
+    <!-- Icon -->
+    <div class="fadeIn first"></div>
+
+    <!-- Login Form -->
+    <form [formGroup]="signForm" (ngSubmit)="onSubmit()" l>
+      <input
+        type="text"
+        id="name"
+        class="fadeIn second"
+        name="name"
+        placeholder="Name"
+        formControlName="name"
+        required
+      />
+      <input
+        type="number"
+        id="mobile"
+        class="fadeIn third"
+        name="mobile"
+        maxlength="10"
+        minlength="10"
+        placeholder="Mobile Number"
+        formControlName="mobile"
+        required
+      />
+
+      <input
+        type="password"
+        id="password"
+        class="fadeIn third"
+        name="password"
+        placeholder="password"
+        formControlName="password"
+        required
+      />
+
+      <select name="role" id="role" formControlName="role">
+        <option value="">Select your Role</option>
+
+        <option value="admin">Admin</option>
+        <option value="superadmin">Super Admin</option>
+      </select>
+
+      <input type="submit" class="fadeIn fourth" value="Sign Up" />
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div class="err-msg">{{ errorMessage }}</div>
+    <div id="formFooter">
+      <a class="underlineHover" href="">Sign In</a>
+    </div>
+  </div>
+</div>

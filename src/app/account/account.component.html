@@ -1,0 +1,28 @@
+<div class="card">
+  <h4 class="card-header">Account Setting</h4>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" value="Mohammed" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="password">Mobile </label>
+        <input type="password" class="form-control" value="9087801920" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" value="123456" />
+      </div>
+      <div class="form-group" *ngIf="role === 'superadmin'">
+        <label for="password">select Role</label>
+        <select name="role" id="role" class="form-control">
+          <option value="">Select Role</option>
+          <option value="admin" selected>Admin</option>
+          <option value="superadmin">SuperAdmin</option>
+        </select>
+      </div>
+      <button class="btn btn-primary">Update</button>
+    </form>
+  </div>
+</div>
